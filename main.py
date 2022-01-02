@@ -10,10 +10,11 @@ def commit(file, new_text):
     # remove content
     f = open(file, "w")
     f.close()
-    os.system(f"echo {new_text} > output.txt")
-    os.system(f"git add {file}")
-    os.system(f"git commit -m \"commit of {new_text}\"")
-    os.system('git push origin master')
+    os.system(f"cd C:\\Users\\kakoumet\\OneDrive - Microsoft Office 365\\Documents\\BotCommits "
+              f"&& echo {new_text} > output.txt "
+              f"&& git add {file} "
+              f"&& git commit -m \"commit of {new_text}\" "
+              f"&& git push origin master")
 
 
 nb_commits = random.randint(0,25)
